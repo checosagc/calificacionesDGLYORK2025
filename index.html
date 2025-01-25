@@ -128,6 +128,7 @@
 
         #category{
             width:300px;
+            
         }
             
         .button-container {
@@ -149,6 +150,8 @@
 
         .cat-container,.company-container,.day-container {
             padding: 1% 3%;
+           
+
           
         }
 
@@ -157,6 +160,7 @@
             flex-direction: column; /* Apila los elementos en columna */
             align-items: flex-start; /* Alinea al inicio horizontalmente */
             /*margin-bottom: 10px; /* Espacio inferior para cada grupo */
+        
         }
 
         .company-container {
@@ -315,7 +319,7 @@
                         console.log(categoria2[i2]);
                         var option = document.createElement('option');
                         option.value = categoria2[i2];
-                        option.text = categoria2[i2];
+                        option.text = categoria2[i2].slice(3);
                         document.getElementById('category').appendChild(option);
                         document.getElementById('campo').innerText=categoria2[0];
                        
@@ -345,7 +349,7 @@
                     for (var i = 0; i < categoria[0].length; i++) {
                             var option = document.createElement('option');
                             option.value = categoria[0][i];
-                            option.text = categoria[0][i];
+                            option.text = categoria[0][i].slice(3);
 
                             document.getElementById('company').appendChild(option);
                     }
@@ -405,7 +409,7 @@
                         console.log(categoria[i]);
                         var option = document.createElement('option');
                         option.value = categoria[i];
-                        option.text = categoria[i];
+                        option.text = categoria[i].slice(3);
                         document.getElementById('company').appendChild(option);
                 }
             });
@@ -585,7 +589,7 @@
 
 
                 else{    
-                        stringTabla="<tr> <th>Juez</th> <th>Tiempo</th> <th>Musicalidad</th> <th>Coreografía</th> <th>Técnica Danza</th> <th>Técnica Genero</th>  <th>Dificultad</th> <th>Proyección Escénica</th> <th>Presentación Visual</th>  <th>CALFI CACIÓN</th></tr>";
+                        stringTabla="<tr> <th>Juez</th> <th>Tiempo</th> <th>Musicalidad</th> <th>Coreografía</th> <th>Téc. Danza</th> <th>Téc. Genero</th>  <th>Dificultad</th> <th>Proy. Esc.</th> <th>Pres. Visual</th>  <th>CALF.</th></tr>";
                         console.log("no Casino");
                         for (let i of jueces){
                                                     fila="<tr><td>";
